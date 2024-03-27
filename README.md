@@ -31,22 +31,22 @@ Uncommenting the lines:
 ```shell
 ADD https://github.com/rapid7/hackazon/archive/master.zip /tmp/
 ```
-   _ and:
+   and:
 ```shell
 RUN cd /tmp/ && unzip master.zip && mkdir -p /container/source_code && cp -R /tmp/hackazon-master/* /container/source_code/
 ```
-   _ will load Hackazon source code directly from Rapid7's Hackazon GitHub project (https://github.com/rapid7/hackazon)
+   will load Hackazon source code directly from Rapid7's Hackazon GitHub project (https://github.com/rapid7/hackazon)
 
 2) Add Hackazon (or your own source code) to this project's "source code" folder
 Uncommenting the lines (uncommented by default):
 ```shell
 RUN mkdir -p /container/source_code
 ```
-and:
+   and:
 ```shell
 ADD source_code/* /container/source_code
 ```
-will move whatever source code you have placed in the LOCAL source_code directory (note: remove "REMOVE_ME.txt" file from folder) to a source_code directory located at /container/source_code inside the Docker container (and therefore accessible by the Docker container).
+   will move whatever source code you have placed in the LOCAL source_code directory (note: remove "REMOVE_ME.txt" file from folder) to a source_code directory located at /container/source_code inside the Docker container (and therefore accessible by the Docker container).
 
 ### Build and start
 Once Docker is installed, start the docker image:
