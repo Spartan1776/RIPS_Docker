@@ -1,12 +1,12 @@
-# About RIPS_Docker
-RIPS_Docker is Docker container for the (now abandoned) RIPS 0.5 static source code analyzer for PHP vulnerabilities
+# About rips-docker
+rips-docker is Docker container for the (now abandoned) RIPS 0.5 static source code analyzer for PHP vulnerabilities
 
 ## How to use this project 
 
 ### Clone this repo 
 ```shell
-git clone https://github.com/Spartan1776/RIPS_Docker/
-cd RIPS_Docker
+git clone https://github.com/Spartan1776/rips-docker/
+cd rips-docker
 ```
 
 ### Configure Docker
@@ -17,9 +17,9 @@ sudo ./easyDockerInstall
 ```
 
 ## Configuring Source Code Location
-This project was originally developed to support static source code analysis of PHP vulnerabilities in Hackazon.
+The rips-docker project was originally developed to support static source code analysis of PHP vulnerabilities in Hackazon; however, it includes functionality (see Option #2 below) for static analysis of any .php files.
 
-### Context - About Hackazon
+### Context - Hackazon
 Hackazon is a vulnerable test application site, that incorporates a realistic e-commerce workflow with full functionality and technology commonly used in today’s mobile and web applications.
 
 If you'd like to load Hackazon in a Docker container (not required to scan source code), an updated version of Newlode's Dockerized Hackazon project (now archived) is available here: https://github.com/Spartan1776/hackazon
