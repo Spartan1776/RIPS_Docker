@@ -63,7 +63,7 @@ For Chrome:
 chromium http://127.0.0.1:8086
 ```
 
-## Scanning Source Code
+## Scanning source code
 This guide won't go into an in-depth explanation of the settings available on the RIPS localhost page.
 
 However, in order to scan your source code, enter:
@@ -73,6 +73,13 @@ However, in order to scan your source code, enter:
 into the "path / file:" box on the RIPS localhost page.
 
 Also check the "code style:" value ("phps" for Hackazon) prior to clicking "scan".
+
+## Changing source code between scans
+
+To swap source code, use Option #1 or #2 mentioned above, then rebuild the docker image using:
+```shell
+sudo docker-compose up --build
+```
 
 Happy hunting!
 
