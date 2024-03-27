@@ -78,6 +78,7 @@ Happy hunting!
 
 ## Special Thanks
 This project was developed around the ripsscanner RIPS 0.5 static source code analyzer for PHP vulnerabilities (https://github.com/ripsscanner/rips).
+
 The Docker configuration was developed with inspiration from Newlode's Dockerized Hackazon project (https://github.com/Newlode/hackazon).
 
 Thanks for all the hard work!
