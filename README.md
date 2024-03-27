@@ -26,7 +26,9 @@ If you'd like to load Hackazon in a Docker container (not required to scan sourc
 
 ### Two Options for Source Code Analysis:
 The [Dockerfile](https://github.com/Spartan1776/RIPS_Docker/blob/master/Dockerfile) is pre-configured with two ways to analyze source code:
+
 1 - Load Hackazon source code directly with no user interaction:
+
 Uncommenting the lines:
 ```shell
 ADD https://github.com/rapid7/hackazon/archive/master.zip /tmp/
@@ -35,6 +37,7 @@ RUN cd /tmp/ && unzip master.zip && mkdir -p /container/source_code && cp -R /tm
 will load Hackazon source code directly from Rapid7's Hackazon GitHub project (https://github.com/rapid7/hackazon)
 
 2 - Add Hackazon (or your own source code) to this project's "source code" folder
+
 Uncommenting the lines (uncommented by default):
 ```shell
 RUN mkdir -p /container/source_code
