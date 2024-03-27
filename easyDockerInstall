@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Easy-install script for Docker -- should work with most Debian-based distros
+# If not, follow these installation instructions:
+#  1. https://docs.docker.com/engine/install/ -- choose your platform (if it's supported)
+#  2. https://docs.docker.com/compose/install/linux/ -- install Compose plugin
+
+# Uninstall old packages (includes docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc)
+echo -e "\n==> Uninstalling old packages..."
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
+# Add Docker's official GPG key:
+echo -e "\n==> Updating system..."
+sudo apt-get update
+
+echo -e "\n==> Installing ca-certificates and curl..."
+sudo apt-get install ca-certificates curl
+
+echo -e "\n==> Creating /etc/apt/keyrings..."
+sudo install -m 0755 -d /etc/apt/keyrings
+
+echo -e "\n==> Configuring keyrings..."
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+echo -e "\n==> Adding repository to the Apt sources..."
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+echo -e "\n==> Checking for additional updates..."
+sudo apt-get update
+
+echo -e "\n==> Installing Docker engine..."
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+echo -e "\n==> Checking Docker engine installation..."
+if ! command -v docker &> /dev/null; then
+    echo -e "\n==X ERROR: Docker failed to install; exiting now..."
+    exit 1
+fi
+
+echo -e "\n==> Running hello-world container..."
+sudo docker run hello-world
+
+echo -e "\n==> Installing Docker Compose (and associated plugin)..."
+sudo apt-get install docker-compose-plugin
+sudo apt-get install docker-compose
+
+echo -e "\n==> Testing Docker compose plugin..."
+output=$(docker compose version)
+
+if echo "$output" | grep -q "Docker Compose version"; then
+    echo -e "==> Docker Compose installation successful:"
+    echo "$output"
+else
+    echo -e "\n==X ERROR: Docker Compose version not found; exiting now..."
+    exit 1
+fi
