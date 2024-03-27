@@ -72,6 +72,8 @@ However, in order to scan your source code, enter:
 ```
 into the "path / file:" box on the RIPS localhost page.
 
+Also check the "code style:" value ("phps" for Hackazon) prior to clicking "scan".
+
 Happy hunting!
 
 ## Special Thanks
