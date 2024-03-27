@@ -22,7 +22,7 @@ This project was originally developed to support static source code analysis of 
 ### Context - About Hackazon
 Hackazon is a vulnerable test application site, that incorporates a realistic e-commerce workflow with full functionality and technology commonly used in today’s mobile and web applications.
 
-If you'd like to load Hackazon in a Docker container, an updated version of Newlode's Dockerized Hackazon project (now archived) is available here: https://github.com/Spartan1776/hackazon
+If you'd like to load Hackazon in a Docker container (not required to scan source code), an updated version of Newlode's Dockerized Hackazon project (now archived) is available here: https://github.com/Spartan1776/hackazon
 
 ### Two Options for Source Code Analysis:
 The [Dockerfile](https://github.com/Spartan1776/RIPS_Docker/blob/master/Dockerfile) is pre-configured with two ways to analyze source code:
