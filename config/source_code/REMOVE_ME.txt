@@ -1,5 +1,0 @@
-WARNING!! TEMP FILE!!
-
-If you are trying to add code to this folder to be analyzed by RIPS, **remove this file and add your code into this folder**
-
-DO NOT CHANGE THE FOLDER NAME UNLESS YOU MODIFY THE SUPPORTING FILES, TOO
