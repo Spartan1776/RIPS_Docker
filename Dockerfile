@@ -15,7 +15,7 @@ RUN apt update && apt install unzip -y && cd /tmp/ && unzip master.zip \
 #ADD https://github.com/rapid7/hackazon/archive/master.zip /tmp/
 #RUN cd /tmp/ && unzip master.zip && mkdir -p /container/source_code && cp -R /tmp/hackazon-master/* /container/source_code/
 
-# Else, uncomment the following line to move source code for source_code project folder to /tmp
+# Else, uncomment the following line to move source code from source_code project folder to /container/source_code
 RUN mkdir -p /container/source_code
 ADD source_code/* /container/source_code
 
