@@ -76,7 +76,7 @@ Also check the "code style:" value ("phps" for Hackazon) prior to clicking "scan
 
 ## Changing source code between scans
 
-To swap source code, use Option #1 or #2 mentioned above, then rebuild the docker image using:
+To swap source code, use Option #1 or #2 for adding source code (mentioned above), then rebuild the docker image using:
 ```shell
 sudo docker-compose up --build
 ```
