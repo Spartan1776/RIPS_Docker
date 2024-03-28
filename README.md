@@ -1,5 +1,5 @@
 # About rips-docker
-rips-docker is a Docker container for the (now abandoned) RIPS 0.5 static source code analyzer for PHP vulnerabilities
+rips-docker is a Docker build for the (now abandoned) RIPS 0.5 static source code analyzer for PHP vulnerabilities
 
 ## How to use this project 
 
