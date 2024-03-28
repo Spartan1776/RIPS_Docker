@@ -13,7 +13,7 @@ RUN apt update && apt install unzip -y && cd /tmp/ && unzip master.zip \
 
 # If you're trying to scan Hackazon application, uncomment the next two lines:
 #ADD https://github.com/rapid7/hackazon/archive/master.zip /tmp/ # Uncomment for Option 1 -- see README.md
-#RUN cd /tmp/ && unzip master.zip && mkdir -p /container/source_code && cp -R /tmp/hackazon-master/* /container/source_code/ # Uncomment for Option 1 -- see README.md
+#RUN cd /tmp/ && unzip master.zip && mkdir -p /container/source_code && cp -R /tmp/hackazon-master /container/source_code/ # Uncomment for Option 1 -- see README.md
 
 # Else, uncomment the following line to move source code from source_code project folder to /container/source_code
 RUN mkdir -p /container/source_code # Uncomment for Option 2 -- see README.md
