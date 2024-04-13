@@ -16,6 +16,12 @@ chmod +700 easyDockerInstall
 sudo ./easyDockerInstall
 ```
 
+If easyDockerInstall fails, try running kaliDockerFix
+```shell
+chmod +700 kaliDockerFix
+sudo ./kaliDockerFix
+```
+
 ## Configuring Source Code Location
 The rips-docker project was originally developed to support static source code analysis of PHP vulnerabilities in Hackazon; however, it includes functionality (see Option #2 below) for static analysis of any .php files.
 
