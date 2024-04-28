@@ -53,6 +53,14 @@ ADD source_code/* /container/source_code
 ```
 will move whatever source code you have placed in the LOCAL source_code directory (note: remove "REMOVE_ME.txt" file from folder) to a source_code directory located at /container/source_code inside the Docker container (and therefore accessible by the Docker container).
 
+If you wanted to load a local copy of Hackazon into source_code:
+```shell
+cd rips-docker/source_code
+rm -f REMOVE_ME.txt
+git clone https://github.com/rapid7/hackazon
+```
+This will place a directory named "hackazon" with all GitHub project files inside the source_code directory.
+
 ### Build and start
 Once Docker is installed, start the docker image:
 ```shell
