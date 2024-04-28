@@ -56,7 +56,7 @@ will move whatever source code you have placed in the LOCAL source_code director
 ### Build and start
 Once Docker is installed, start the docker image:
 ```shell
-sudo docker-compose up
+sudo docker compose up
 ```
 
 ### Wait for a few seconds then contact the server:
@@ -84,7 +84,7 @@ Also check the "code style:" value ("phps" for Hackazon) prior to clicking "scan
 
 To swap source code, use Option #1 or #2 for adding source code (mentioned above), then rebuild the docker image using:
 ```shell
-sudo docker-compose up --build
+sudo docker compose up --build
 ```
 
 Happy hunting!
