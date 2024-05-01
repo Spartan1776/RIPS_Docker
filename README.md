@@ -51,7 +51,7 @@ Uncommenting the lines (uncommented by default):
 RUN mkdir -p /container/source_code
 ADD source_code/* /container/source_code
 ```
-will move whatever source code you have placed in the rips-docker/source_code directory to the /container/source_code directory inside the Docker container.
+will move whatever source code you have placed in the rips-docker/source_code directory (note: you may want to remove the REMOVE_ME.txt file inside this folder prior to scanning) to the /container/source_code directory inside the Docker container.
 
 If you wanted to load a local copy of Hackazon into source_code:
 ```shell
